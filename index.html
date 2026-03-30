@@ -205,20 +205,20 @@
 <body>
 <div id="versione" class="version-box">v1.0.4f</div>
 <a class="home-button" href="https://balza1979.github.io/Elmi-Documenti/">Home</a>
-<h3 class="tab-title">SCHEDE ELMI</h3>
+<h3 class="tab-title">Ingressi scheda base 1B</h3>
 <div class="tab-bar">
-  <button class="tab-button active" onclick="selezionaFoglio('errori', this)">ERRORI BETA-K</button>
-  <button class="tab-button" onclick="selezionaFoglio('stato', this)">STATI BETA-K</button>
+  <button class="tab-button active" onclick="selezionaFoglio('programmazione', this)">Programmazione1B</button>
+ 
 </div>
 
 <h3 class="tab-title">ALTRI DISPOSITIVI</h3>
 <div class="tab-bar">
-  <button class="tab-button" onclick="selezionaFoglio('lm2a_errori', this)">FUJI_LM2A</button>
-  <button class="tab-button" onclick="selezionaFoglio('Nxp_errori', this)">VACON_NXP</button>
+<button class="tab-button active" onclick="selezionaFoglio('programmazione', this)">Programmazione1B</button>
+ <button class="tab-button active" onclick="selezionaFoglio('programmazione', this)">Programmazione1B</button>
 </div>
  <h3 class="tab-title">MALFUNZIONAMETI</h3>
   <div class="tab-bar">
-  <button class="tab-button" onclick="selezionaFoglio('situazione', this)">SITUAZIONE IMPIANTO</button>
+<button class="tab-button active" onclick="selezionaFoglio('programmazione', this)">Programmazione1B</button>
   </div>
 
 <div class="container">
@@ -260,7 +260,7 @@ let workbookCache = null;
 
 async function loadWorkbook() {
   if (workbookCache) return workbookCache;
-  const file = await fetch("errori.xlsx");
+  const file = await fetch("141NoVba.xlsx");
   const arrayBuffer = await file.arrayBuffer();
   workbookCache = XLSX.read(arrayBuffer, { type: "array" });
   return workbookCache;
