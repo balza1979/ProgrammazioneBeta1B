@@ -288,11 +288,16 @@ async function caricaExcel(nomeFoglio) {
   menu.innerHTML = "";
 
   righe.forEach((riga, index) => {
-    const opt = document.createElement("option");
-    opt.value = index;
-    opt.textContent = riga[47];
+  if (!riga) return;
+
+  const opt = document.createElement("option");
+  opt.value = index;
+  opt.textContent = riga[47] ?? "";
+  
+  if (menu) {
     menu.appendChild(opt);
-  });
+  }
+});
 
   menu.onchange = () => {
     const r = righe[menu.value];
