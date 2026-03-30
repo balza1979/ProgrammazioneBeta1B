@@ -280,9 +280,9 @@ async function caricaExcel(nomeFoglio) {
   const righe = dati.slice(1);
 
   document.getElementById("labelA_det").textContent = intestazioni[0] || "";
-  document.getElementById("labelB").textContent = intestazioni[1] || "";
-  document.getElementById("labelC").textContent = intestazioni[2] || "";
-  document.getElementById("labelD").textContent = intestazioni[3] || "";
+  document.getElementById("labelB").textContent = intestazioni[49] || "";
+  document.getElementById("labelC").textContent = intestazioni[50] || "";
+  document.getElementById("labelD").textContent = intestazioni[51] || "";
 
   const menu = document.getElementById("menu");
   menu.innerHTML = "";
@@ -303,9 +303,9 @@ async function caricaExcel(nomeFoglio) {
     const r = righe[menu.value];
 
     document.getElementById("menuDettaglio").value = menu.options[menu.selectedIndex].text;
-    document.getElementById("campoB").value = r[1] || "";
-    document.getElementById("campoC").value = r[2] || "";
-    document.getElementById("campoD").value = r[3] || "";
+    document.getElementById("campoB").value = r[49] || "";
+    document.getElementById("campoC").value = r[50] || "";
+    document.getElementById("campoD").value = r[51] || "";
 
     const manualiDiv = document.getElementById("manuali-container");
     manualiDiv.innerHTML = "";
